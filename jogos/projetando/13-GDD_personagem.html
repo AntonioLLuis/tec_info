@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>GDD: Personagens, NPCs e Objetos Interativos</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #0f172a; color: #f8fafc; display: flex; justify-content: center; align-items: center; min-height: 100vh; overflow: hidden; }
+        .slide-container { width: 90vw; height: 85vh; max-width: 1200px; max-height: 700px; background-color: #1e293b; border-radius: 16px; border: 2px solid #334155; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5); display: flex; flex-direction: column; justify-content: space-between; padding: 40px; position: relative; }
+        .slide { display: none; height: 100%; flex-direction: column; justify-content: flex-start; }
+        .slide.active { display: flex; }
+        h1 { color: #38bdf8; font-size: 2.2rem; margin-bottom: 10px; border-bottom: 2px solid #0284c7; padding-bottom: 10px; }
+        h2 { color: #f1f5f9; font-size: 1.5rem; margin-top: 10px; margin-bottom: 15px; }
+        p, li { font-size: 1.15rem; line-height: 1.5; color: #cbd5e1; }
+        ul { margin-left: 25px; margin-top: 5px; }
+        li { margin-bottom: 8px; }
+        strong { color: #fbbf24; }
+        .highlight-box { background-color: #0f172a; border-left: 5px solid #38bdf8; padding: 12px 18px; border-radius: 0 8px 8px 0; margin-top: 15px; }
+        .highlight-box p { color: #e2e8f0; font-style: italic; }
+        .footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #334155; padding-top: 15px; margin-top: 15px; }
+        .nav-btns button { background-color: #0284c7; color: white; border: none; padding: 10px 20px; font-size: 1rem; font-weight: bold; border-radius: 6px; cursor: pointer; margin-left: 10px; }
+        .nav-btns button:hover { background-color: #0369a1; }
+        .slide-number { color: #64748b; font-weight: bold; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 10px; }
+        .card { background-color: #0f172a; padding: 12px; border-radius: 8px; border: 1px solid #334155; }
+        .card h3 { color: #38bdf8; font-size: 1.1rem; margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+
+<div class="slide-container">
+    
+    <!-- Slide 1 -->
+    <div class="slide active">
+        <h1>🦸 Personagens, NPCs e Objetos no GDD</h1>
+        <h2>Documentando Elementos Vivos e Interativos do Jogo</h2>
+        <div style="margin-top: 30px;">
+            <p><strong>Módulo:</strong> Construção de Documentação de Game Design</p>
+            <p><strong>Foco:</strong> Especificações de Arte, Movimentação, Física e Programação</p>
+        </div>
+        <div class="highlight-box" style="margin-top: 40px;">
+            <p>📝 "Quanto mais detalhista você for no GDD, mais fácil será para os artistas desenharem e para os programadores implementarem na Game Engine."</p>
+        </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide">
+        <h1>⚔️ O Protagonista (Personagem Principal)</h1>
+        <h2>Estruturando a Ficha do Herói</h2>
+        <ul>
+            <li><strong>Características Estéticas:</strong> Nome, altura, etnia/raça, porte físico (magro, forte, etc.).</li>
+            <li><strong>Movimentação Básica:</strong> Anda, corre, pula, puxa objetos, atira, esquiva.</li>
+            <li><strong>Árvore de Habilidades & Progressão:</strong>
+                <ul>
+                    <li>Quantidade inicial de habilidades x novas técnicas adquiridas com o tempo.</li>
+                    <li>Sistema de nível e evolução (ex: progressão no estilo <em>God of War</em>).</li>
+                </ul>
+            </li>
+            <li><strong>Referências Visuais:</strong> Uso de concept arts ou sketches para servir de guia.</li>
+        </ul>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide">
+        <h1>👥 Personagens Secundários e NPCs</h1>
+        <h2>Os Habitantes do Mundo do Jogo</h2>
+        <ul>
+            <li><strong>O que são NPCs?</strong> <em>Non-Playable Characters</em> (Personagens Não-Jogáveis).</li>
+            <li><strong>Papel Narrativo e Funcional:</strong>
+                <ul>
+                    <li>Avançar a história, dar missões ou vender itens.</li>
+                    <li><strong>Exemplo Clássico:</strong> O Mercador em <em>Resident Evil 4</em> que vende e melhora armas.</li>
+                </ul>
+            </li>
+            <li><strong>O que Documentar?</strong> Nome, estética, movimentação no cenário e utilidade direta para o jogador.</li>
+        </ul>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="slide">
+        <h1>📦 Objetos Interativos & Física</h1>
+        <h2>Do Coletável ao Elemento de Cenário</h2>
+        <div class="grid-2">
+            <div class="card">
+                <h3>Objetos de Interação</h3>
+                <p>Moedas, chaves, frutas de regeneração, baús e caixas.</p>
+                <p>Define o impacto do item no progresso ou atributos do jogador.</p>
+            </div>
+            <div class="card">
+                <h3>Propriedades Físicas</h3>
+                <p>Material do objeto (madeira, metal, vidro).</p>
+                <p>Atributos na Game Engine: peso/massa, gravidade e colisão.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="slide">
+        <h1>💻 A Importância para a Equipe Técnica</h1>
+        <h2>Conectando Game Design, Arte e Programação</h2>
+        <ul>
+            <li><strong>Para os Artistas / Designers:</strong>
+                <ul>
+                    <li>Sabem exatamente as proporções, ângulos e estilo visual do personagem ou item.</li>
+                </ul>
+            </li>
+            <li><strong>Para os Programadores:</strong>
+                <ul>
+                    <li>Sabem se a moeda tem animação giratória, se a caixa quebra ao cair, ou qual código de física aplicar na Engine.</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="highlight-box">
+            <p>💡 Um GDD bem detalhado elimina ambiguidades e evita retrabalho durante a produção.</p>
+        </div>
+    </div>
+
+    <!-- Slide 6 -->
+    <div class="slide">
+        <h1>✍️ Atividade Prática</h1>
+        <h2>Criando a Ficha de Elementos no GDD</h2>
+        <p>No documento do seu projeto, documente os seguintes itens:</p>
+        <ul>
+            <li>1. <strong>Ficha do Protagonista:</strong> Nome, visual, 3 ações principais e 1 habilidade especial.</li>
+            <li>2. <strong>Um NPC Importante:</strong> Qual a função dele para o jogador?</li>
+            <li>3. <strong>Um Objeto Interativo:</strong> Nome, material (física) e o que acontece quando o jogador encosta nele (ex: moeda giratória +10 pontos).</li>
+        </ul>
+    </div>
+
+    <!-- Rodapé e Navegação -->
+    <div class="footer">
+        <span class="slide-number" id="slide-num">Slide 1 / 6</span>
+        <div class="nav-btns">
+            <button onclick="changeSlide(-1)">Anterior</button>
+            <button onclick="changeSlide(1)">Próximo</button>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const slideNum = document.getElementById('slide-num');
+
+    function showSlide(index) {
+        slides.forEach(s => s.classList.remove('active'));
+        slides[index].classList.add('active');
+        slideNum.innerText = `Slide ${index + 1} / ${slides.length}`;
+    }
+
+    function changeSlide(direction) {
+        currentSlide += direction;
+        if (currentSlide < 0) currentSlide = 0;
+        if (currentSlide >= slides.length) currentSlide = slides.length - 1;
+        showSlide(currentSlide);
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === ' ') changeSlide(1);
+        if (e.key === 'ArrowLeft') changeSlide(-1);
+    });
+</script>
+
+</body>
+</html>

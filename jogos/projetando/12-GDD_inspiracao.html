@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>GDD: Objetivo, Inspirações e Características Gerais</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #0f172a; color: #f8fafc; display: flex; justify-content: center; align-items: center; min-height: 100vh; overflow: hidden; }
+        .slide-container { width: 90vw; height: 85vh; max-width: 1200px; max-height: 700px; background-color: #1e293b; border-radius: 16px; border: 2px solid #334155; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5); display: flex; flex-direction: column; justify-content: space-between; padding: 40px; position: relative; }
+        .slide { display: none; height: 100%; flex-direction: column; justify-content: flex-start; }
+        .slide.active { display: flex; }
+        h1 { color: #38bdf8; font-size: 2.2rem; margin-bottom: 10px; border-bottom: 2px solid #0284c7; padding-bottom: 10px; }
+        h2 { color: #f1f5f9; font-size: 1.5rem; margin-top: 10px; margin-bottom: 15px; }
+        p, li { font-size: 1.15rem; line-height: 1.5; color: #cbd5e1; }
+        ul { margin-left: 25px; margin-top: 5px; }
+        li { margin-bottom: 8px; }
+        strong { color: #fbbf24; }
+        .highlight-box { background-color: #0f172a; border-left: 5px solid #38bdf8; padding: 12px 18px; border-radius: 0 8px 8px 0; margin-top: 15px; }
+        .highlight-box p { color: #e2e8f0; font-style: italic; }
+        .footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #334155; padding-top: 15px; margin-top: 15px; }
+        .nav-btns button { background-color: #0284c7; color: white; border: none; padding: 10px 20px; font-size: 1rem; font-weight: bold; border-radius: 6px; cursor: pointer; margin-left: 10px; }
+        .nav-btns button:hover { background-color: #0369a1; }
+        .slide-number { color: #64748b; font-weight: bold; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 10px; }
+        .card { background-color: #0f172a; padding: 12px; border-radius: 8px; border: 1px solid #334155; }
+        .card h3 { color: #38bdf8; font-size: 1.1rem; margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+
+<div class="slide-container">
+    
+    <!-- Slide 1 -->
+    <div class="slide active">
+        <h1>📑 Planejamento Avançado do GDD</h1>
+        <h2>Objetivo, Referências e Características Gerais</h2>
+        <div style="margin-top: 30px;">
+            <p><strong>Módulo:</strong> Estruturação do Game Design Document</p>
+            <p><strong>Tópicos:</strong> Escopo, Inspirações, Público-Alvo e Parâmetros Técnicos</p>
+        </div>
+        <div class="highlight-box" style="margin-top: 40px;">
+            <p>🎯 "Organizar os objetivos e características gerais no GDD evita fugir do escopo inicial durante a produção do jogo."</p>
+        </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide">
+        <h1>🎯 O Objetivo do Jogo no GDD</h1>
+        <h2>Mantendo o Foco do Desenvolvimento</h2>
+        <ul>
+            <li><strong>O que é?</strong> A declaração clara do que o jogador deve fazer e do sentimento esperado.</li>
+            <li><strong>Exemplo:</strong> <em>"Sobreviver a uma sequência de fases desafiadoras em tempo limitado, oferecendo diversão e entretenimento ao usuário."</em></li>
+            <li><strong>Por que é essencial?</strong>
+                <ul>
+                    <li>Funciona como bússola ao longo do desenvolvimento.</li>
+                    <li>Permite validar se novas mecânicas não estão desviando da ideia original.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide">
+        <h1>💡 Referências & Inspirações</h1>
+        <h2>Construindo Sobre Bases Consolidadas (Sem Plágio)</h2>
+        <ul>
+            <li><strong>Importância:</strong> Serve de guia para a equipe entender a estética, o ritmo e o estilo do projeto.</li>
+            <li><strong>Referência ≠ Plágio:</strong> Coletar mecânicas e ideias e adaptá-las para criar a sua própria identidade.</li>
+            <li><strong>Exemplos de Referência:</strong>
+                <ul>
+                    <li><strong>Plataforma:</strong> <em>Super Mario</em>, <em>Metal Soldiers</em>.</li>
+                    <li><strong>Sobrevivência:</strong> <em>Resident Evil</em>.</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="highlight-box">
+            <p>📌 Analisar jogos existentes ajuda a entender o que funciona e onde seu projeto pode inovar.</p>
+        </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="slide">
+        <h1>👥 Público-Alvo & Persona (Avatar)</h1>
+        <h2>Para Quem o Jogo Está Sendo Feito?</h2>
+        <div class="grid-2">
+            <div class="card">
+                <h3>Classificação Indicativa</h3>
+                <p><strong>Livre:</strong> Conteúdo adequado para todos (violência fantasiosa leve, ausência de mortes explícitas).</p>
+                <p><strong>Outras faixas:</strong> 10, 12, 14, 16 e 18 anos conforme temas sensíveis (armas, drogas insinuadas, etc.).</p>
+            </div>
+            <div class="card">
+                <h3>Construção da Persona</h3>
+                <p>Definição de dados demográficos: idade, hábitos, localização e interesses.</p>
+                <p><strong>Ferramentas de Pesquisa:</strong> Google Trends e Meta/Facebook Insights para validar o público.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="slide">
+        <h1>⚙️ Características Gerais do Projeto (Parte 1)</h1>
+        <h2>Definições de Arte e Gameplay</h2>
+        <ul>
+            <li><strong>Gênero e Subgênero:</strong> Definição precisa da categoria do jogo (ex: Plataforma 2D Action-RPG).</li>
+            <li><strong>Perspectiva Visual:</strong> Primeira Pessoa (1ª pessoa) ou Terceira Pessoa (3ª pessoa).</li>
+            <li><strong>Estilo Gráfico:</strong> 2D (Pixel art, Vetorial), 3D (Low-poly, Fotorrealista), etc.</li>
+            <li><strong>Modo de Jogo:</strong> Singleplayer, Multiplayer cooperativo ou competitivo.</li>
+        </ul>
+    </div>
+
+    <!-- Slide 6 -->
+    <div class="slide">
+        <h1>🛠️ Características Gerais do Projeto (Parte 2)</h1>
+        <h2>Escopo Técnico e Distribuição</h2>
+        <ul>
+            <li><strong>Escopo e Fases:</strong> Número de cenários, fases e níveis de dificuldade (Fácil, Médio, Difícil).</li>
+            <li><strong>Plataforma e Controles:</strong> Mobile (Touchscreen), PC (Teclado/Mouse, Gamepad) ou Consoles.</li>
+            <li><strong>Idioma & Localização:</strong> Português, Inglês, Espanhol, etc.</li>
+            <li><strong>Tecnologia e Negócio:</strong>
+                <ul>
+                    <li><strong>Engine:</strong> Unity, Unreal, Godot, Construct, etc.</li>
+                    <li><strong>Monetização:</strong> Premium, F2P com Anúncios, In-App Purchases (IAP).</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Slide 7 -->
+    <div class="slide">
+        <h1>✍️ Atividade Prática</h1>
+        <h2>Ficha Técnica do Seu Jogo</h2>
+        <p>Preencha no seu GDD os seguintes tópicos principais:</p>
+        <ul>
+            <li>1. <strong>Objetivo Principal:</strong> Em uma frase, qual é o foco do jogador?</li>
+            <li>2. <strong>Três Jogos de Inspiração:</strong> Quais referências sustentam a sua ideia?</li>
+            <li>3. <strong>Público-Alvo:</strong> Classificação indicativa e faixa etária.</li>
+            <li>4. <strong>Ficha Técnica:</strong> Gênero, Gráficos (2D/3D), Engine e Plataforma.</li>
+        </ul>
+    </div>
+
+    <!-- Rodapé e Navegação -->
+    <div class="footer">
+        <span class="slide-number" id="slide-num">Slide 1 / 7</span>
+        <div class="nav-btns">
+            <button onclick="changeSlide(-1)">Anterior</button>
+            <button onclick="changeSlide(1)">Próximo</button>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const slideNum = document.getElementById('slide-num');
+
+    function showSlide(index) {
+        slides.forEach(s => s.classList.remove('active'));
+        slides[index].classList.add('active');
+        slideNum.innerText = `Slide ${index + 1} / ${slides.length}`;
+    }
+
+    function changeSlide(direction) {
+        currentSlide += direction;
+        if (currentSlide < 0) currentSlide = 0;
+        if (currentSlide >= slides.length) currentSlide = slides.length - 1;
+        showSlide(currentSlide);
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === ' ') changeSlide(1);
+        if (e.key === 'ArrowLeft') changeSlide(-1);
+    });
+</script>
+
+</body>
+</html>

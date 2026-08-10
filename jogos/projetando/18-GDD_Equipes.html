@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>GDD: Equipe, Cargos e Mercado de Trabalho</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #0f172a; color: #f8fafc; display: flex; justify-content: center; align-items: center; min-height: 100vh; overflow: hidden; }
+        .slide-container { width: 90vw; height: 85vh; max-width: 1200px; max-height: 700px; background-color: #1e293b; border-radius: 16px; border: 2px solid #334155; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5); display: flex; flex-direction: column; justify-content: space-between; padding: 40px; position: relative; }
+        .slide { display: none; height: 100%; flex-direction: column; justify-content: flex-start; }
+        .slide.active { display: flex; }
+        h1 { color: #38bdf8; font-size: 2.2rem; margin-bottom: 10px; border-bottom: 2px solid #0284c7; padding-bottom: 10px; }
+        h2 { color: #f1f5f9; font-size: 1.5rem; margin-top: 10px; margin-bottom: 15px; }
+        p, li { font-size: 1.15rem; line-height: 1.5; color: #cbd5e1; }
+        ul { margin-left: 25px; margin-top: 5px; }
+        li { margin-bottom: 8px; }
+        strong { color: #fbbf24; }
+        .highlight-box { background-color: #0f172a; border-left: 5px solid #38bdf8; padding: 12px 18px; border-radius: 0 8px 8px 0; margin-top: 15px; }
+        .highlight-box p { color: #e2e8f0; font-style: italic; }
+        .footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #334155; padding-top: 15px; margin-top: 15px; }
+        .nav-btns button { background-color: #0284c7; color: white; border: none; padding: 10px 20px; font-size: 1rem; font-weight: bold; border-radius: 6px; cursor: pointer; margin-left: 10px; }
+        .nav-btns button:hover { background-color: #0369a1; }
+        .slide-number { color: #64748b; font-weight: bold; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 10px; }
+        .card { background-color: #0f172a; padding: 12px; border-radius: 8px; border: 1px solid #334155; }
+        .card h3 { color: #38bdf8; font-size: 1.1rem; margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+
+<div class="slide-container">
+    
+    <!-- Slide 1 -->
+    <div class="slide active">
+        <h1>👥 Equipe de Desenvolvimento & Cargos no GDD</h1>
+        <h2>Mapeamento de Funções, Responsabilidades e Mercado</h2>
+        <div style="margin-top: 30px;">
+            <p><strong>Módulo Final:</strong> Encerramento da Estrutura do GDD</p>
+            <p><strong>Tópicos:</strong> Equipe do Projeto, Funções da Indústria e Panorama do Mercado</p>
+        </div>
+        <div class="highlight-box" style="margin-top: 40px;">
+            <p>🎯 "Registrar a equipe no GDD define responsabilidades claras e direciona a cobrança de entregas em cada etapa da produção."</p>
+        </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide">
+        <h1>📋 A Seção de Equipe no GDD</h1>
+        <h2>Atribuição de Responsabilidades e Escopo</h2>
+        <ul>
+            <li><strong>Por que incluir a Equipe?</strong>
+                <ul>
+                    <li>Identifica quem é o responsável por cada área do projeto (Código, Arte, Som, Design).</li>
+                    <li>Define a quem recorrer para cobranças de prazos e revisões.</li>
+                </ul>
+            </li>
+            <li><strong>Desenvolvimento Solo (Solo Dev):</strong> Se você for fazer o jogo sozinho, seu nome constará em todas as áreas do documento.</li>
+        </ul>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide">
+        <h1>💻 Programador & Artista Gráfico</h1>
+        <h2>Os Pilares Técnico e Visual</h2>
+        <div class="grid-2">
+            <div class="card">
+                <h3>Programador de Jogos</h3>
+                <p><strong>Função:</strong> Cria o código-base, física, mecânicas e movimentação dos personagens.</p>
+                <p><strong>Linguagens:</strong> C, C++, C#, Java, Python.</p>
+                <p><strong>Faixa Salarial (BR):</strong> R$ 1.500 a R$ 5.000+ mensais (Sênior pode atingir R$ 65 mil/ano).</p>
+            </div>
+            <div class="card">
+                <h3>Artista Gráfico</h3>
+                <p><strong>Função:</strong> Define a identidade visual, paleta de cores, modelos 2D/3D e estética dos personagens.</p>
+                <p><strong>Impacto:</strong> Comunica visualmente quem é vilão, herói e o perigo do cenário.</p>
+                <p><strong>Faixa Salarial (BR):</strong> R$ 1.200 a R$ 3.500 (Grande potencial para Freelance).</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="slide">
+        <h1>🎬 Game Designer, Redator & Roteirista</h1>
+        <h2>Visão, Regras e Narrativa do Jogo</h2>
+        <ul>
+            <li><strong>Game Designer ("Diretor do Jogo"):</strong>
+                <ul>
+                    <li><strong>Lead Designer:</strong> Coordena a visão geral do projeto.</li>
+                    <li><strong>Systems Designer:</strong> Define as regras e mecânicas.</li>
+                    <li><strong>Level Designer:</strong> Cria fases, ambientação e missões.</li>
+                </ul>
+            </li>
+            <li><strong>Roteirista & Redator:</strong> Elaboram a trama, diálogos, cutscenes e mantêm a coerência e interatividade do mundo.</li>
+        </ul>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="slide">
+        <h1>🎧 Produtor, Audio Designer & QA Tester</h1>
+        <h2>Gestão, Imersão Sonora e Qualidade</h2>
+        <div class="grid-2">
+            <div class="card">
+                <h3>Produtor de Games</h3>
+                <p><strong>Interno:</strong> Acompanha o desenvolvimento diário no estúdio.</p>
+                <p><strong>Externo (Executivo):</strong> Fiscaliza prazos e andamento de múltiplos projetos.</p>
+            </div>
+            <div class="card">
+                <h3>Audio & Game Tester</h3>
+                <p><strong>Audio Designer:</strong> Cria efeitos sonoros, trilhas e ambientação de áudio.</p>
+                <p><strong>QA Tester:</strong> Avalia jogabilidade, busca bugs e testa protótipos.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 6 -->
+    <div class="slide">
+        <h1>🚀 Devs Independentes (Indies) & Marketing</h1>
+        <h2>Do Desenvolvimento à Comercialização</h2>
+        <ul>
+            <li><strong>Desenvolvedores Indies:</strong> Equipes enxutas ou individuais que assumem múltiplas funções no projeto.</li>
+            <li><strong>Marketing de Jogos:</strong>
+                <ul>
+                    <li>Planeja estratégias de promoção e lançamento.</li>
+                    <li>Definitivo para determinar o sucesso comercial ou o fracasso do título no mercado.</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="highlight-box">
+            <p>💡 Um bom jogo precisa de um marketing forte para se destacar no mercado global!</p>
+        </div>
+    </div>
+
+    <!-- Slide 7 -->
+    <div class="slide">
+        <h1>✍️ Atividade Prática Final</h1>
+        <h2>Fechando o GDD do Seu Projeto</h2>
+        <p>Preencha a última seção do seu Game Design Document:</p>
+        <ul>
+            <li>1. <strong>Mapeamento de Funções:</strong> Quem é o responsável por Arte, Código, Design e Som?</li>
+            <li>2. <strong>Plano Indie / Colaborativo:</strong> Quem fará o teste (QA) e a divulgação do jogo?</li>
+            <li>3. <strong>Revisão Geral:</strong> O seu GDD contém Objetivo, Referências, Personagens, Fluxo, Telas, Controles, Ferramentas e Equipe?</li>
+        </ul>
+    </div>
+
+    <!-- Rodapé e Navegação -->
+    <div class="footer">
+        <span class="slide-number" id="slide-num">Slide 1 / 7</span>
+        <div class="nav-btns">
+            <button onclick="changeSlide(-1)">Anterior</button>
+            <button onclick="changeSlide(1)">Próximo</button>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const slideNum = document.getElementById('slide-num');
+
+    function showSlide(index) {
+        slides.forEach(s => s.classList.remove('active'));
+        slides[index].classList.add('active');
+        slideNum.innerText = `Slide ${index + 1} / ${slides.length}`;
+    }
+
+    function changeSlide(direction) {
+        currentSlide += direction;
+        if (currentSlide < 0) currentSlide = 0;
+        if (currentSlide >= slides.length) currentSlide = slides.length - 1;
+        showSlide(currentSlide);
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === ' ') changeSlide(1);
+        if (e.key === 'ArrowLeft') changeSlide(-1);
+    });
+</script>
+
+</body>
+</html>

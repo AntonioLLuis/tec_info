@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Produção de Jogos - Fase de Planejamento</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #0f172a; color: #f8fafc; display: flex; justify-content: center; align-items: center; min-height: 100vh; overflow: hidden; }
+        .slide-container { width: 90vw; height: 85vh; max-width: 1200px; max-height: 700px; background-color: #1e293b; border-radius: 16px; border: 2px solid #334155; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5); display: flex; flex-direction: column; justify-content: space-between; padding: 40px; position: relative; }
+        .slide { display: none; height: 100%; flex-direction: column; justify-content: flex-start; }
+        .slide.active { display: flex; }
+        h1 { color: #38bdf8; font-size: 2.2rem; margin-bottom: 10px; border-bottom: 2px solid #0284c7; padding-bottom: 10px; }
+        h2 { color: #f1f5f9; font-size: 1.6rem; margin-top: 15px; margin-bottom: 15px; }
+        p, li { font-size: 1.25rem; line-height: 1.6; color: #cbd5e1; }
+        ul { margin-left: 30px; margin-top: 10px; }
+        li { margin-bottom: 12px; }
+        strong { color: #fbbf24; }
+        .highlight-box { background-color: #0f172a; border-left: 5px solid #38bdf8; padding: 15px 20px; border-radius: 0 8px 8px 0; margin-top: 20px; }
+        .highlight-box p { color: #e2e8f0; font-style: italic; }
+        .footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #334155; padding-top: 15px; margin-top: 20px; }
+        .nav-btns button { background-color: #0284c7; color: white; border: none; padding: 10px 20px; font-size: 1rem; font-weight: bold; border-radius: 6px; cursor: pointer; margin-left: 10px; transition: background 0.2s; }
+        .nav-btns button:hover { background-color: #0369a1; }
+        .slide-number { color: #64748b; font-weight: bold; }
+        .diagram { display: flex; justify-content: space-around; align-items: center; margin: 30px 0; background: #0f172a; padding: 20px; border-radius: 10px; }
+        .diagram-step { background: #0284c7; padding: 15px 25px; border-radius: 8px; font-weight: bold; text-align: center; font-size: 1.2rem; }
+        .diagram-arrow { color: #fbbf24; font-size: 1.8rem; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="slide-container">
+    
+    <!-- Slide 1 -->
+    <div class="slide active">
+        <h1>🎮 Introdução ao Desenvolvimento de Jogos</h1>
+        <h2>Como Ocorre o Processo de Produção de um Game?</h2>
+        <div style="margin-top: 40px;">
+            <p><strong>Módulo:</strong> Gestão de Projetos de Jogos</p>
+            <p><strong>Foco da Aula:</strong> A Fase 1 - Planejamento Estratégico</p>
+        </div>
+        <div class="highlight-box" style="margin-top: 60px;">
+            <p>💡 "Criar um jogo não é apenas ter uma ideia legal; é transformar essa ideia em um produto estruturado e viável."</p>
+        </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide">
+        <h1>📌 As 3 Grandes Fases de um Projeto</h1>
+        <h2>O Caminho da Ideia até o Jogador</h2>
+        <div class="diagram">
+            <div class="diagram-step">1. Planejamento<br><small style="font-weight:normal;">Visão Geral e Pesquisa</small></div>
+            <div class="diagram-arrow">➔</div>
+            <div class="diagram-step" style="background:#0369a1;">2. GDD<br><small style="font-weight:normal;">Game Design Document</small></div>
+            <div class="diagram-arrow">➔</div>
+            <div class="diagram-step" style="background:#075985;">3. Produção<br><small style="font-weight:normal;">Mão na Massa & Lançamento</small></div>
+        </div>
+        <div class="highlight-box">
+            <p><strong>O Ciclo PDCA da Produção:</strong> Planejar ➔ Fazer ➔ Checar (Workshops) ➔ Corrigir. Esse círculo se repete até o produto estar refinado!</p>
+        </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide">
+        <h1>🎯 Item 1: Verificar a Demanda e Público-Alvo</h1>
+        <h2>Não Crie Apenas o que Você Acha Legal!</h2>
+        <ul>
+            <li><strong>Entenda a Necessidade:</strong> Seu jogo precisa resolver o desejo de um público específico.</li>
+            <li><strong>Pesquisa Aprimorada:</strong> Quanto melhor você conhece seu jogador, maior a chance de sucesso.</li>
+            <li><strong>Escala do Projeto:</strong>
+                <ul>
+                    <li>É um jogo com potencial <strong>Mundial</strong>?</li>
+                    <li>É um jogo focado no mercado <strong>Nacional</strong>?</li>
+                    <li>É para um público de <strong>Nicho</strong> (ex: 5 a 10 mil pessoas)?</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="slide">
+        <h1>🔎 Item 2: Conceito Inicial e Pesquisa de Referências</h1>
+        <h2>Construindo a Base Teórica do Seu Jogo</h2>
+        <ul>
+            <li><strong>Mapeamento do Escopo:</strong> Qual é a mecânica principal? Como é o visual?</li>
+            <li><strong>Análise de Concorrentes:</strong> Quem já fez algo parecido? O que podemos aprender com eles?</li>
+            <li><strong>O Diferencial Competitivo:</strong> O que o seu jogo traz de novo ou evolui em relação aos jogos existentes?</li>
+        </ul>
+        <div class="highlight-box">
+            <p><strong>Regra de Ouro:</strong> A etapa de conceito serve para embasar e provar que sua ideia tem valor no mercado.</p>
+        </div>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="slide">
+        <h1>🗣️ Item 3: Apresentar o Projeto para a Equipe</h1>
+        <h2>Alinhando Expectativas Desde o Dia Um</h2>
+        <p>Mesmo que sua equipe seja pequena (ou seja só você!), organize as informações em uma apresentação oficial:</p>
+        <ul>
+            <li>🔞 <strong>Faixa Etária / Classificação Indicativa</strong></li>
+            <li>🌍 <strong>Localização</strong> (Idiomas e adaptação cultural)</li>
+            <li>🎮 <strong>Como Jogar</strong> (Regras centrais e controles)</li>
+            <li>📦 <strong>Documentação e Expansões Futuras</strong></li>
+        </ul>
+        <div class="highlight-box">
+            <p>💡 Apresentar a ideia ajuda a equipe a enxergar problemas e furos na lógica ANTES da programação começar.</p>
+        </div>
+    </div>
+
+    <!-- Slide 6 -->
+    <div class="slide">
+        <h1>🎲 Item 4 & 5: Modelo Físico e Testes com Público</h1>
+        <h2>Tirando o Jogo da Tela e Validando a Ideia</h2>
+        <ul>
+            <li><strong>O que é o Modelo Físico?</strong> Usar papel, cartas, dados ou maquetes para enxergar e testar a mecânica sem programar.</li>
+            <li><strong>Por que testar antes?</strong> Evita erros de lógica estrutural custosos na fase de produção.</li>
+            <li><strong>Teste com Público-Alvo:</strong> Crie grupos (WhatsApp, Discord, Facebook) com o perfil dos seus futuros jogadores.</li>
+        </ul>
+        <div class="highlight-box">
+            <p>📣 <strong>Feedback Real:</strong> O público dirá se o projeto é palpável e se terá retorno financeiro/engajamento.</p>
+        </div>
+    </div>
+
+    <!-- Slide 7 -->
+    <div class="slide">
+        <h1>🚀 Conclusão e Próximos Passos</h1>
+        <h2>Do Planejamento para a Ação</h2>
+        <p>Com a fase de planejamento concluída e validada, estamos prontos para:</p>
+        <div class="diagram" style="margin-top: 20px;">
+            <div class="diagram-step" style="background:#15803d;">FASE 2<br>Escrever o GDD Completo</div>
+            <div class="diagram-arrow">➔</div>
+            <div class="diagram-step" style="background:#166534;">FASE 3<br>Desenvolvimento, Arte, Marketing e Publicação</div>
+        </div>
+        <div class="highlight-box">
+            <p>✍️ <strong>Atividade Prática:</strong> Defina em uma frase qual é o Público-Alvo e o Diferencial do seu projeto de jogo!</p>
+        </div>
+    </div>
+
+    <!-- Rodapé e Navegação -->
+    <div class="footer">
+        <span class="slide-number" id="slide-num">Slide 1 / 7</span>
+        <div class="nav-btns">
+            <button onclick="changeSlide(-1)">Anterior</button>
+            <button onclick="changeSlide(1)">Próximo</button>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const slideNum = document.getElementById('slide-num');
+
+    function showSlide(index) {
+        slides.forEach(s => s.classList.remove('active'));
+        slides[index].classList.add('active');
+        slideNum.innerText = `Slide ${index + 1} / ${slides.length}`;
+    }
+
+    function changeSlide(direction) {
+        currentSlide += direction;
+        if (currentSlide < 0) currentSlide = 0;
+        if (currentSlide >= slides.length) currentSlide = slides.length - 1;
+        showSlide(currentSlide);
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === ' ') changeSlide(1);
+        if (e.key === 'ArrowLeft') changeSlide(-1);
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>GDD e a Jornada do Herói nos Jogos</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #0f172a; color: #f8fafc; display: flex; justify-content: center; align-items: center; min-height: 100vh; overflow: hidden; }
+        .slide-container { width: 90vw; height: 85vh; max-width: 1200px; max-height: 700px; background-color: #1e293b; border-radius: 16px; border: 2px solid #334155; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5); display: flex; flex-direction: column; justify-content: space-between; padding: 40px; position: relative; }
+        .slide { display: none; height: 100%; flex-direction: column; justify-content: flex-start; }
+        .slide.active { display: flex; }
+        h1 { color: #38bdf8; font-size: 2.2rem; margin-bottom: 10px; border-bottom: 2px solid #0284c7; padding-bottom: 10px; }
+        h2 { color: #f1f5f9; font-size: 1.5rem; margin-top: 10px; margin-bottom: 15px; }
+        p, li { font-size: 1.15rem; line-height: 1.5; color: #cbd5e1; }
+        ul { margin-left: 25px; margin-top: 5px; }
+        li { margin-bottom: 8px; }
+        strong { color: #fbbf24; }
+        .highlight-box { background-color: #0f172a; border-left: 5px solid #38bdf8; padding: 12px 18px; border-radius: 0 8px 8px 0; margin-top: 15px; }
+        .highlight-box p { color: #e2e8f0; font-style: italic; }
+        .footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #334155; padding-top: 15px; margin-top: 15px; }
+        .nav-btns button { background-color: #0284c7; color: white; border: none; padding: 10px 20px; font-size: 1rem; font-weight: bold; border-radius: 6px; cursor: pointer; margin-left: 10px; }
+        .nav-btns button:hover { background-color: #0369a1; }
+        .slide-number { color: #64748b; font-weight: bold; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 10px; }
+        .card { background-color: #0f172a; padding: 12px; border-radius: 8px; border: 1px solid #334155; }
+        .card h3 { color: #38bdf8; font-size: 1.1rem; margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+
+<div class="slide-container">
+    
+    <!-- Slide 1 -->
+    <div class="slide active">
+        <h1>🎮 GDD & A Jornada do Herói</h1>
+        <h2>Documentação e Estrutura Narrativa para Jogos</h2>
+        <div style="margin-top: 40px;">
+            <p><strong>Disciplina:</strong> Introdução ao Desenvolvimento de Jogos</p>
+            <p><strong>Conteúdo:</strong> O que é GDD e a Narrativa Clássica de 12 Etapas</p>
+        </div>
+        <div class="highlight-box" style="margin-top: 50px;">
+            <p>📖 "Um bom jogo precisa de um bom manual (GDD) e de uma história que prenda a atenção do jogador do início ao fim."</p>
+        </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide">
+        <h1>📄 O que é o GDD (Game Design Document)?</h1>
+        <h2>O Manual Definitivo do Seu Jogo</h2>
+        <ul>
+            <li><strong>Definição:</strong> É o documento central onde todas as informações do jogo são organizadas.</li>
+            <li><strong>Para que serve?</strong> Serve para a equipe (artistas, programadores, áudio) saber exatamente o que fazer.</li>
+            <li><strong>O que contém no GDD?</strong>
+                <ul>
+                    <li>Gênero, História e Personagens</li>
+                    <li>Mecânicas de Gameplay e Regras</li>
+                    <li>Física, Controles, Telas e Interface</li>
+                </ul>
+            </li>
+            <li><strong>Onde fazer?</strong> No Word, Google Docs ou qualquer editor de texto em tópicos claros.</li>
+        </ul>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide">
+        <h1>🗡️ Narrativa: A Jornada do Herói</h1>
+        <h2>A Fórmula das Grandes Histórias</h2>
+        <ul>
+            <li><strong>Origem:</strong> Criada por <strong>Joseph Campbell</strong> (*O Herói de Mil Faces*) analisando mitos e lendas (tinha 17 etapas originais).</li>
+            <li><strong>Adaptação:</strong> Condensada por <strong>Christopher Vogler</strong> (*A Jornada do Escritor*) em <strong>12 etapas claras</strong>.</li>
+            <li><strong>Por que usar em Jogos?</strong> Porque cria identificação imediata do jogador com o protagonista e mantém o interesse do início ao fim!</li>
+        </ul>
+        <div class="highlight-box">
+            <p>💡 Usada em grandes clássicos do cinema e games: Star Wars, Matrix, Zelda, God of War e muitos outros.</p>
+        </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="slide">
+        <h1>🚀 Etapas 1 a 4: O Início da Aventura</h1>
+        <div class="grid-2">
+            <div class="card">
+                <h3>1. O Mundo Comum</h3>
+                <p>Apresenta o herói, seu dia a dia, qualidades, defeitos e sua rotina antes da aventura.</p>
+            </div>
+            <div class="card">
+                <h3>2. O Chamado à Aventura</h3>
+                <p>Um problema ou desafio tira o herói da sua zona de conforto e exige uma decisão.</p>
+            </div>
+            <div class="card">
+                <h3>3. A Recusa do Chamado</h3>
+                <p>O medo e a hesitação aparecem. O herói prefere a segurança do lar do que os perigos do desconhecido.</p>
+            </div>
+            <div class="card">
+                <h3>4. O Encontro com o Mentor</h3>
+                <p>O herói recebe conselhos, treinamento, poderes ou um objeto mágico para ganhar confiança.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="slide">
+        <h1>🔥 Etapas 5 a 8: O Desafio Cresce</h1>
+        <div class="grid-2">
+            <div class="card">
+                <h3>5. A Travessia do 1º Limiar</h3>
+                <p>O herói entra de cabeça no mundo desconhecido. Não há mais volta.</p>
+            </div>
+            <div class="card">
+                <h3>6. Provas, Aliados e Inimigos</h3>
+                <p>Testes menores preparam o herói. Ele descobre quem quer ajudá-lo e quem quer destruí-lo.</p>
+            </div>
+            <div class="card">
+                <h3>7. A Aproximação / Recuo</h3>
+                <p>Pausa para reflexão e preparação antes do maior confronto da história.</p>
+            </div>
+            <div class="card">
+                <h3>8. A Provação Suprema</h3>
+                <p>O teste de morte e ressurreição. O herói enfrenta o seu maior medo ou inimigo mortal.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 6 -->
+    <div class="slide">
+        <h1>🏆 Etapas 9 a 12: A Vitória e o Retorno</h1>
+        <div class="grid-2">
+            <div class="card">
+                <h3>9. A Recompensa</h3>
+                <p>O herói conquista o objetivo (uma habilidade, arma, tesouro ou conhecimento).</p>
+            </div>
+            <div class="card">
+                <h3>10. O Caminho de Volta</h3>
+                <p>Início do retorno para casa, refletindo sobre a missão e suas escolhas.</p>
+            </div>
+            <div class="card">
+                <h3>11. A Ressurreição Final</h3>
+                <p>O clímax definitivo! O inimigo surge para um último ataque surpresa. É o teste final do herói.</p>
+            </div>
+            <div class="card">
+                <h3>12. Retorno com o Elixir</h3>
+                <p>O herói volta transformado para o seu mundo, trazendo a solução e o sucesso para todos.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 7 -->
+    <div class="slide">
+        <h1>✍️ Atividade Prática no GDD</h1>
+        <h2>Aplicando a Jornada no Seu Jogo</h2>
+        <p><strong>Exercício em Sala de Aula:</strong></p>
+        <ul>
+            <li>Abra o documento de texto (GDD) do seu projeto.</li>
+            <li>Escreva um parágrafo resumindo a história do seu jogo.</li>
+            <li>Identifique pelo menos 4 etapas no seu roteiro:
+                <br>➔ <strong>Quem é o Herói?</strong> (Mundo Comum)
+                <br>➔ <strong>Qual é o Problema?</strong> (Chamado)
+                <br>➔ <strong>Quem é o Mentor / Item Mágico?</strong>
+                <br>➔ <strong>Qual é a Batalha Final?</strong> (Ressurreição)</li>
+        </ul>
+    </div>
+
+    <!-- Rodapé e Navegação -->
+    <div class="footer">
+        <span class="slide-number" id="slide-num">Slide 1 / 7</span>
+        <div class="nav-btns">
+            <button onclick="changeSlide(-1)">Anterior</button>
+            <button onclick="changeSlide(1)">Próximo</button>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const slideNum = document.getElementById('slide-num');
+
+    function showSlide(index) {
+        slides.forEach(s => s.classList.remove('active'));
+        slides[index].classList.add('active');
+        slideNum.innerText = `Slide ${index + 1} / ${slides.length}`;
+    }
+
+    function changeSlide(direction) {
+        currentSlide += direction;
+        if (currentSlide < 0) currentSlide = 0;
+        if (currentSlide >= slides.length) currentSlide = slides.length - 1;
+        showSlide(currentSlide);
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === ' ') changeSlide(1);
+        if (e.key === 'ArrowLeft') changeSlide(-1);
+    });
+</script>
+
+</body>
+</html>

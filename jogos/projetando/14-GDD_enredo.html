@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>GDD: Fluxo do Jogo, Progressão e Enigmas</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #0f172a; color: #f8fafc; display: flex; justify-content: center; align-items: center; min-height: 100vh; overflow: hidden; }
+        .slide-container { width: 90vw; height: 85vh; max-width: 1200px; max-height: 700px; background-color: #1e293b; border-radius: 16px; border: 2px solid #334155; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5); display: flex; flex-direction: column; justify-content: space-between; padding: 40px; position: relative; }
+        .slide { display: none; height: 100%; flex-direction: column; justify-content: flex-start; }
+        .slide.active { display: flex; }
+        h1 { color: #38bdf8; font-size: 2.2rem; margin-bottom: 10px; border-bottom: 2px solid #0284c7; padding-bottom: 10px; }
+        h2 { color: #f1f5f9; font-size: 1.5rem; margin-top: 10px; margin-bottom: 15px; }
+        p, li { font-size: 1.15rem; line-height: 1.5; color: #cbd5e1; }
+        ul { margin-left: 25px; margin-top: 5px; }
+        li { margin-bottom: 8px; }
+        strong { color: #fbbf24; }
+        .highlight-box { background-color: #0f172a; border-left: 5px solid #38bdf8; padding: 12px 18px; border-radius: 0 8px 8px 0; margin-top: 15px; }
+        .highlight-box p { color: #e2e8f0; font-style: italic; }
+        .footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #334155; padding-top: 15px; margin-top: 15px; }
+        .nav-btns button { background-color: #0284c7; color: white; border: none; padding: 10px 20px; font-size: 1rem; font-weight: bold; border-radius: 6px; cursor: pointer; margin-left: 10px; }
+        .nav-btns button:hover { background-color: #0369a1; }
+        .slide-number { color: #64748b; font-weight: bold; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 10px; }
+        .card { background-color: #0f172a; padding: 12px; border-radius: 8px; border: 1px solid #334155; }
+        .card h3 { color: #38bdf8; font-size: 1.1rem; margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+
+<div class="slide-container">
+    
+    <!-- Slide 1 -->
+    <div class="slide active">
+        <h1>🗺️ Organograma de Fluxo & Progressão no GDD</h1>
+        <h2>Mapeando Escolhas, Missões e Desafios do Jogador</h2>
+        <div style="margin-top: 30px;">
+            <p><strong>Módulo:</strong> Estruturação de Level Design e Game Flow</p>
+            <p><strong>Tópicos:</strong> Fluxograma de Decisões, Curva de Aprendizado e Puzzles</p>
+        </div>
+        <div class="highlight-box" style="margin-top: 40px;">
+            <p>📌 "O fluxo do jogo é a organização visual que cria o elo do início ao fim, definindo o que acontece a cada decisão do jogador."</p>
+        </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide">
+        <h1>🔄 O Fluxo do Jogo (Game Flow)</h1>
+        <h2>A Organização Visual de Caminhos e Decisões</h2>
+        <ul>
+            <li><strong>O que é o Organograma do Jogo?</strong> É o mapeamento visual (fluxograma) de todas as possibilidades de ação.</li>
+            <li><strong>Mapeamento de Tomada de Decisão:</strong>
+                <ul>
+                    <li>Ponto de início do personagem na fase.</li>
+                    <li>Caminhos possíveis: se vai para a esquerda, direita ou em frente.</li>
+                    <li>Consequências: abrir baús, coletar itens, disparar gatilhos de eventos.</li>
+                </ul>
+            </li>
+            <li><strong>Objetivo:</strong> Garantir que a lógica espacial e narrativa do jogo seja coerente e sem "becos sem saída" não planejados.</li>
+        </ul>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide">
+        <h1>📈 Progressão do Jogador</h1>
+        <h2>Conectando o Início ao Fim da Jornada</h2>
+        <ul>
+            <li><strong>Conceito de Elo Narrativo:</strong> A progressão estabelece um vínculo contínuo entre o início e o encerramento do jogo.</li>
+            <li><strong>Crescimento do Personagem:</strong>
+                <ul>
+                    <li>Começar com poucas habilidades e recursos limitados.</li>
+                    <li>Desenvolver novas técnicas e ficar mais forte ao longo do jogo.</li>
+                </ul>
+            </li>
+            <li><strong>Exemplo Clássico:</strong> <em>God of War</em>, onde Kratos adquire novas armas e poderes que transformam sua capacidade de combate.</li>
+        </ul>
+        <div class="highlight-box">
+            <p>⚡ Uma curva de progressão bem desenhada é o principal elemento para manter o jogador engajado do começo ao fim.</p>
+        </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="slide">
+        <h1>🎯 Estrutura de Missões e Desafios</h1>
+        <h2>Detalhando os Objetivos no GDD</h2>
+        <div class="grid-2">
+            <div class="card">
+                <h3>Definição de Missões</h3>
+                <p>Mapeamento claro das tarefas principais e secundárias que o jogador deve cumprir para avançar na fase.</p>
+            </div>
+            <div class="card">
+                <h3>Aumento de Dificuldade</h3>
+                <p>Desafios estruturados de forma gradual para testar as habilidades recém-adquiridas pelo jogador.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="slide">
+        <h1>🧩 Enigmas, Puzzles e Quebra-Cabeças</h1>
+        <h2>Mecânicas Detalhadas no Documento</h2>
+        <ul>
+            <li><strong>O Papel dos Enigmas:</strong> Desafios lógicos que variam o ritmo do jogo e exigem raciocínio do jogador.</li>
+            <li><strong>Nível de Detalhamento Obrigatório:</strong>
+                <ul>
+                    <li>Registrar passo a passo como o puzzle é resolvido.</li>
+                    <li>Especificar gatilhos, ordem de botões, itens necessários e estado inicial/final.</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="highlight-box">
+            <p>⚠️ <strong>Atenção:</strong> Evite descrições genéricas! Escreva todas as regras do quebra-cabeça de forma ultra minuciosa no seu GDD.</p>
+        </div>
+    </div>
+
+    <!-- Slide 6 -->
+    <div class="slide">
+        <h1>✍️ Atividade Prática</h1>
+        <h2>Esboçando o Organograma do Seu Jogo</h2>
+        <p>Desenhe ou descreva no seu GDD os seguintes passos:</p>
+        <ul>
+            <li>1. <strong>Ponto de Partida:</strong> Onde o jogador nasce na fase e qual o primeiro objetivo?</li>
+            <li>2. <strong>Decisão Dupla:</strong> Se o jogador for para a esquerda, o que encontra? E para a direita?</li>
+            <li>3. <strong>Estrutura de um Puzzle:</strong> Descreva a solução de 1 enigma da sua fase (ex: encontrar chave X para abrir porta Y).</li>
+        </ul>
+    </div>
+
+    <!-- Rodapé e Navegação -->
+    <div class="footer">
+        <span class="slide-number" id="slide-num">Slide 1 / 6</span>
+        <div class="nav-btns">
+            <button onclick="changeSlide(-1)">Anterior</button>
+            <button onclick="changeSlide(1)">Próximo</button>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const slideNum = document.getElementById('slide-num');
+
+    function showSlide(index) {
+        slides.forEach(s => s.classList.remove('active'));
+        slides[index].classList.add('active');
+        slideNum.innerText = `Slide ${index + 1} / ${slides.length}`;
+    }
+
+    function changeSlide(direction) {
+        currentSlide += direction;
+        if (currentSlide < 0) currentSlide = 0;
+        if (currentSlide >= slides.length) currentSlide = slides.length - 1;
+        showSlide(currentSlide);
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === ' ') changeSlide(1);
+        if (e.key === 'ArrowLeft') changeSlide(-1);
+    });
+</script>
+
+</body>
+</html>

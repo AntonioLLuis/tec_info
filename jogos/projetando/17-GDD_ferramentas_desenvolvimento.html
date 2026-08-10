@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>GDD: Ferramentas de Desenvolvimento e Game Engines</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #0f172a; color: #f8fafc; display: flex; justify-content: center; align-items: center; min-height: 100vh; overflow: hidden; }
+        .slide-container { width: 90vw; height: 85vh; max-width: 1200px; max-height: 700px; background-color: #1e293b; border-radius: 16px; border: 2px solid #334155; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5); display: flex; flex-direction: column; justify-content: space-between; padding: 40px; position: relative; }
+        .slide { display: none; height: 100%; flex-direction: column; justify-content: flex-start; }
+        .slide.active { display: flex; }
+        h1 { color: #38bdf8; font-size: 2.2rem; margin-bottom: 10px; border-bottom: 2px solid #0284c7; padding-bottom: 10px; }
+        h2 { color: #f1f5f9; font-size: 1.5rem; margin-top: 10px; margin-bottom: 15px; }
+        p, li { font-size: 1.15rem; line-height: 1.5; color: #cbd5e1; }
+        ul { margin-left: 25px; margin-top: 5px; }
+        li { margin-bottom: 8px; }
+        strong { color: #fbbf24; }
+        .highlight-box { background-color: #0f172a; border-left: 5px solid #38bdf8; padding: 12px 18px; border-radius: 0 8px 8px 0; margin-top: 15px; }
+        .highlight-box p { color: #e2e8f0; font-style: italic; }
+        .footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #334155; padding-top: 15px; margin-top: 15px; }
+        .nav-btns button { background-color: #0284c7; color: white; border: none; padding: 10px 20px; font-size: 1rem; font-weight: bold; border-radius: 6px; cursor: pointer; margin-left: 10px; }
+        .nav-btns button:hover { background-color: #0369a1; }
+        .slide-number { color: #64748b; font-weight: bold; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 10px; }
+        .card { background-color: #0f172a; padding: 12px; border-radius: 8px; border: 1px solid #334155; }
+        .card h3 { color: #38bdf8; font-size: 1.1rem; margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+
+<div class="slide-container">
+    
+    <!-- Slide 1 -->
+    <div class="slide active">
+        <h1>🛠️ Ferramentas de Desenvolvimento no GDD</h1>
+        <h2>Softwares, Engines e Ecossistema de Produção</h2>
+        <div style="margin-top: 30px;">
+            <p><strong>Módulo:</strong> Documentação Técnica e Planejamento de Software</p>
+            <p><strong>Tópicos:</strong> Game Engines, Arte 2D/3D, Comunicação e Documentação</p>
+        </div>
+        <div class="highlight-box" style="margin-top: 40px;">
+            <p>💻 "Mapear todas as ferramentas no GDD garante que toda a equipe trabalhe com os mesmos softwares e padrões técnicos."</p>
+        </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide">
+        <h1>📑 O que Mapear nas Ferramentas de Desenvolvimento?</h1>
+        <h2>Documentando o Pipeline Tecnológico</h2>
+        <ul>
+            <li><strong>Mapeamento Completo:</strong> Registrar todos os programas e sistemas usados durante a criação.</li>
+            <li><strong>Categorias Principais:</strong>
+                <ul>
+                    <li>Motor do Jogo (Game Engine).</li>
+                    <li>Softwares de Criação Gráfica (2D e 3D).</li>
+                    <li>Ferramentas de Organização e Repositório de Documentos.</li>
+                    <li>Plataformas de Comunicação da Equipe.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide">
+        <h1>🚀 O que é uma Game Engine (Motor de Jogo)?</h1>
+        <h2>O Coração Tecnológico do Projeto</h2>
+        <ul>
+            <li><strong>Conceito:</strong> É o software responsável por juntar código, física, áudio, gráficos e lógica para rodar o jogo.</li>
+            <li><strong>Exemplos Populares no Mercado:</strong>
+                <ul>
+                    <li><strong>Unity:</strong> Excelente para jogos 2D/3D e projetos mobile/multiplataforma.</li>
+                    <li><strong>Unreal Engine:</strong> Foco em gráficos de alto desempenho e fotorrealismo.</li>
+                    <li><strong>GameMaker & Construct:</strong> Ótimas opções para desenvolvimento 2D rápido.</li>
+                    <li><strong>Blender:</strong> Permite criação de modelos 3D e prototipagem.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="slide">
+        <h1>🎨 Softwares de Arte, Modelagem 3D e Design</h1>
+        <h2>Construindo o Visual do Jogo</h2>
+        <div class="grid-2">
+            <div class="card">
+                <h3>Arte 2D e Texturização</h3>
+                <p><strong>Photoshop / GIMP:</strong> Utilizados para criação de conceitos, artes de UI, texturas e sprites.</p>
+            </div>
+            <div class="card">
+                <h3>Modelagem e Animação 3D</h3>
+                <p><strong>Blender / Daz Studio:</strong> Ferramentas para esculpir, rigar e animar personagens e cenários 3D.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="slide">
+        <h1>🗣️ Comunicação e Gestão de Documentos</h1>
+        <h2>Mantendo a Equipe Sincronizada</h2>
+        <ul>
+            <li><strong>Comunicação do Time:</strong> Escolha de canais centrais para troca de ideias e feedbacks rápidos (ex: Discord, Slack, Teams).</li>
+            <li><strong>Gestão de Documentos:</strong> Plataformas para centralizar o GDD e arquivos do projeto em nuvem (ex: Google Drive, Notion, Trello).</li>
+            <li><strong>Benefício:</strong> Evita perda de arquivos e garante que todos consultem a versão mais recente dos documentos.</li>
+        </ul>
+        <div class="highlight-box">
+            <p>📌 Definir previamente onde a equipe vai conversar e guardar arquivos economiza tempo e evita desorganização.</p>
+        </div>
+    </div>
+
+    <!-- Slide 6 -->
+    <div class="slide">
+        <h1>✍️ Atividade Prática</h1>
+        <h2>Listando o Ecossistema Tecnológico no GDD</h2>
+        <p>No documento do seu jogo, preencha a seção de Ferramentas de Desenvolvimento:</p>
+        <ul>
+            <li>1. <strong>Game Engine Escolhida:</strong> Qual motor será usado para criar o jogo?</li>
+            <li>2. <strong>Softwares de Arte:</strong> Quais programas serão usados para arte 2D ou modelagem 3D?</li>
+            <li>3. <strong>Comunicação e Documentação:</strong> Onde a equipe vai conversar e onde o GDD ficará armazenado?</li>
+        </ul>
+    </div>
+
+    <!-- Rodapé e Navegação -->
+    <div class="footer">
+        <span class="slide-number" id="slide-num">Slide 1 / 6</span>
+        <div class="nav-btns">
+            <button onclick="changeSlide(-1)">Anterior</button>
+            <button onclick="changeSlide(1)">Próximo</button>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const slideNum = document.getElementById('slide-num');
+
+    function showSlide(index) {
+        slides.forEach(s => s.classList.remove('active'));
+        slides[index].classList.add('active');
+        slideNum.innerText = `Slide ${index + 1} / ${slides.length}`;
+    }
+
+    function changeSlide(direction) {
+        currentSlide += direction;
+        if (currentSlide < 0) currentSlide = 0;
+        if (currentSlide >= slides.length) currentSlide = slides.length - 1;
+        showSlide(currentSlide);
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === ' ') changeSlide(1);
+        if (e.key === 'ArrowLeft') changeSlide(-1);
+    });
+</script>
+
+</body>
+</html>

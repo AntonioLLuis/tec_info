@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Tipos de Jogos - Prof. Leonardo Gomes</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #0f172a; color: #f8fafc; display: flex; justify-content: center; align-items: center; min-height: 100vh; overflow: hidden; }
+        .slide-container { width: 90vw; height: 85vh; max-width: 1200px; max-height: 700px; background-color: #1e293b; border-radius: 16px; border: 2px solid #334155; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5); display: flex; flex-direction: column; justify-content: space-between; padding: 40px; position: relative; }
+        .slide { display: none; height: 100%; flex-direction: column; justify-content: flex-start; }
+        .slide.active { display: flex; }
+        h1 { color: #38bdf8; font-size: 2.2rem; margin-bottom: 10px; border-bottom: 2px solid #0284c7; padding-bottom: 10px; }
+        h2 { color: #f1f5f9; font-size: 1.5rem; margin-top: 10px; margin-bottom: 15px; }
+        p, li { font-size: 1.15rem; line-height: 1.5; color: #cbd5e1; }
+        ul { margin-left: 25px; margin-top: 5px; }
+        li { margin-bottom: 8px; }
+        strong { color: #fbbf24; }
+        .highlight-box { background-color: #0f172a; border-left: 5px solid #38bdf8; padding: 12px 18px; border-radius: 0 8px 8px 0; margin-top: 15px; }
+        .highlight-box p { color: #e2e8f0; font-style: italic; }
+        .footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #334155; padding-top: 15px; margin-top: 15px; }
+        .nav-btns button { background-color: #0284c7; color: white; border: none; padding: 10px 20px; font-size: 1rem; font-weight: bold; border-radius: 6px; cursor: pointer; margin-left: 10px; }
+        .nav-btns button:hover { background-color: #0369a1; }
+        .slide-number { color: #64748b; font-weight: bold; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 10px; }
+        .card { background-color: #0f172a; padding: 12px; border-radius: 8px; border: 1px solid #334155; }
+        .card h3 { color: #38bdf8; font-size: 1.1rem; margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+
+<div class="slide-container">
+    
+    <!-- Slide 1 -->
+    <div class="slide active">
+        <h1>🎲 Tipos e Classificações de Jogos</h1>
+        <h2>A Variedade das Formas Lúdicas</h2>
+        <div style="margin-top: 30px;">
+            <p><strong>Apresentação:</strong> Prof. Leonardo Gomes</p>
+            <p><strong>Módulo:</strong> Introdução ao Desenvolvimento de Jogos</p>
+        </div>
+        <div class="highlight-box" style="margin-top: 40px;">
+            <p>💡 "Os jogos assumem múltiplas formas: do esporte físico ao tabuleiro, dos dados ao ambiente virtual e sonoro."</p>
+        </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide">
+        <h1>🛋️ Jogos de Mesa & Caneta e Papel</h1>
+        <div class="grid-2">
+            <div class="card">
+                <h3>Jogos de Mesa</h3>
+                <p>Elementos em área confinada; exigem pouco esforço físico corporal.</p>
+                <ul>
+                    <li>Incluem jogos de festa (ex: mímica) sem exigir grande força ou espaço.</li>
+                    <li><strong>Exemplos:</strong> Banco Imobiliário, Jogo da Vida, Damas, Gamão.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Caneta e Papel</h3>
+                <p>Requerem pouco ou nenhum equipamento especial.</p>
+                <ul>
+                    <li>Variam de desenhos a quebra-cabeças lógicos.</li>
+                    <li><strong>Exemplo:</strong> Sudoku e palavras cruzadas.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide">
+        <h1>🃏 Jogos de Cartas</h1>
+        <h2>Usam Baralhos como Ferramenta Central</h2>
+        <ul>
+            <li><strong>Tradicionais (52 Cartas):</strong> Usados em jogos clássicos como o Buraco.</li>
+            <li><strong>Baralhos Regionais:</strong> 32, 36 ou 40 cartas (ex: Baralho Espanhol).</li>
+            <li><strong>Baralho de Tarô:</strong> Composto por 78 cartas.</li>
+            <li><strong>Baralhos Específicos:</strong> Exemplo do <strong>Uno</strong> (comercializado com baralho próprio).</li>
+            <li><strong>Jogos Colecionáveis (TCG):</strong> Cartas compradas/recolhidas em conjuntos (Exemplo: <strong>Yu-Gi-Oh!</strong>).</li>
+        </ul>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="slide">
+        <h1>🎲 Jogos de Dados</h1>
+        <h2>O Dado como Indicador Principal de Progresso</h2>
+        <ul>
+            <li><strong>Elemento Central:</strong> Os dados não servem apenas para auxílio, mas definem a mecânica do jogo.</li>
+            <li><strong>Sorte e Probabilidade:</strong> Envolvem grau de sorte que pode ser gerenciado estrategicamente pelo jogador.</li>
+            <li><strong>Exemplos:</strong> Dados de Poker, Dados de Ouro e jogos de azar.</li>
+        </ul>
+        <div class="highlight-box">
+            <p>🎯 Enquanto no tabuleiro comum o dado serve para mover peças, no jogo de dados ele é o próprio coração da partida.</p>
+        </div>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="slide">
+        <h1>♟️ Jogos de Tabuleiro</h1>
+        <h2>Rastreamento de Recursos e Estratégia</h2>
+        <ul>
+            <li><strong>Superfície e Progresso:</strong> Mapeia posições, recursos e unidades através de componentes físicos.</li>
+            <li><strong>Simulação de Guerras:</strong> Tabuleiros que funcionam como mapas de combate.</li>
+            <li><strong>Jogos em Turnos:</strong>
+                <ul>
+                    <li>O jogador planeja e age na sua vez; depois o oponente faz o mesmo.</li>
+                    <li>Diferente do ritmo em <strong>Tempo Real</strong> (visto em videogames e esportes).</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Slide 6 -->
+    <div class="slide">
+        <h1>🎵 Jogos Musicais & Interativos</h1>
+        <div class="grid-2">
+            <div class="card">
+                <h3>Jogos Musicais e Sonoros</h3>
+                <p>Emissão de sons e ruídos para criar a sonoplastia da história narrada.</p>
+            </div>
+            <div class="card">
+                <h3>Jogos Interativos</h3>
+                <p>Disputa na mesma rede via comunicação virtual ou presencial.</p>
+                <ul>
+                    <li>Usam multimídia, alta tecnologia e teatro.</li>
+                    <li>Eficazes na validação, testes e simulação de procedimentos.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 7 -->
+    <div class="slide">
+        <h1>🚀 Conclusão e Próximos Passos</h1>
+        <h2>Recapitulando Nosso Aprendizado</h2>
+        <ul>
+            <li>Já entendemos o que é jogo, classificamos suas estruturas e exploramos suas diversas categorias.</li>
+            <li>Compreendemos as diferenças fundamentais entre turnos, tempo real, sorte e estratégia.</li>
+        </ul>
+        <div class="highlight-box">
+            <p>👏 Obrigado por assistir! Fiquem atentos, pois vem muito mais conteúdo por aí na próxima aula!</p>
+        </div>
+    </div>
+
+    <!-- Rodapé e Navegação -->
+    <div class="footer">
+        <span class="slide-number" id="slide-num">Slide 1 / 7</span>
+        <div class="nav-btns">
+            <button onclick="changeSlide(-1)">Anterior</button>
+            <button onclick="changeSlide(1)">Próximo</button>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const slideNum = document.getElementById('slide-num');
+
+    function showSlide(index) {
+        slides.forEach(s => s.classList.remove('active'));
+        slides[index].classList.add('active');
+        slideNum.innerText = `Slide ${index + 1} / ${slides.length}`;
+    }
+
+    function changeSlide(direction) {
+        currentSlide += direction;
+        if (currentSlide < 0) currentSlide = 0;
+        if (currentSlide >= slides.length) currentSlide = slides.length - 1;
+        showSlide(currentSlide);
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === ' ') changeSlide(1);
+        if (e.key === 'ArrowLeft') changeSlide(-1);
+    });
+</script>
+
+</body>
+</html>

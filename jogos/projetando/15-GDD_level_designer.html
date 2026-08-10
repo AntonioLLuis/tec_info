@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>GDD: Level Design, Telas e Interface</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #0f172a; color: #f8fafc; display: flex; justify-content: center; align-items: center; min-height: 100vh; overflow: hidden; }
+        .slide-container { width: 90vw; height: 85vh; max-width: 1200px; max-height: 700px; background-color: #1e293b; border-radius: 16px; border: 2px solid #334155; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5); display: flex; flex-direction: column; justify-content: space-between; padding: 40px; position: relative; }
+        .slide { display: none; height: 100%; flex-direction: column; justify-content: flex-start; }
+        .slide.active { display: flex; }
+        h1 { color: #38bdf8; font-size: 2.2rem; margin-bottom: 10px; border-bottom: 2px solid #0284c7; padding-bottom: 10px; }
+        h2 { color: #f1f5f9; font-size: 1.5rem; margin-top: 10px; margin-bottom: 15px; }
+        p, li { font-size: 1.15rem; line-height: 1.5; color: #cbd5e1; }
+        ul { margin-left: 25px; margin-top: 5px; }
+        li { margin-bottom: 8px; }
+        strong { color: #fbbf24; }
+        .highlight-box { background-color: #0f172a; border-left: 5px solid #38bdf8; padding: 12px 18px; border-radius: 0 8px 8px 0; margin-top: 15px; }
+        .highlight-box p { color: #e2e8f0; font-style: italic; }
+        .footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #334155; padding-top: 15px; margin-top: 15px; }
+        .nav-btns button { background-color: #0284c7; color: white; border: none; padding: 10px 20px; font-size: 1rem; font-weight: bold; border-radius: 6px; cursor: pointer; margin-left: 10px; }
+        .nav-btns button:hover { background-color: #0369a1; }
+        .slide-number { color: #64748b; font-weight: bold; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 10px; }
+        .card { background-color: #0f172a; padding: 12px; border-radius: 8px; border: 1px solid #334155; }
+        .card h3 { color: #38bdf8; font-size: 1.1rem; margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+
+<div class="slide-container">
+    
+    <!-- Slide 1 -->
+    <div class="slide active">
+        <h1>📐 Level Design & Mapeamento de Telas no GDD</h1>
+        <h2>Estruturando a Interface e o Fluxo de Telas do Jogo</h2>
+        <div style="margin-top: 30px;">
+            <p><strong>Módulo:</strong> UI/UX e Estrutura do Level Design</p>
+            <p><strong>Tópicos:</strong> Fluxo de Navegação, Paleta de Cores e Telas do Projeto</p>
+        </div>
+        <div class="highlight-box" style="margin-top: 40px;">
+            <p>🎨 "O GDD serve como base central para facilitar o trabalho de toda a equipe, alinhando arte, código e design."</p>
+        </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide">
+        <h1>🤝 O GDD como Guia Integrador da Equipe</h1>
+        <h2>Por que Documentar o Design de Telas?</h2>
+        <ul>
+            <li><strong>Facilitação do Trabalho:</strong> O GDD centraliza as diretrizes visuais e técnicas para que todos sigam a mesma visão.</li>
+            <li><strong>Clareza para Desenvolvedores e Artistas:</strong>
+                <ul>
+                    <li>Artistas sabem quais telas desenhar e quais cores usar.</li>
+                    <li>Programadores sabem quais botões acionam cada tela ou transição.</li>
+                </ul>
+            </li>
+            <li><strong>Evitando Refeito:</strong> Elimina dúvidas sobre o fluxo de navegação antes do início da programação.</li>
+        </ul>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide">
+        <h1>🖥️ Mapeamento de Telas (Parte 1: Entrada)</h1>
+        <h2>A Jornada do Jogador Antes de Iniciar o Level</h2>
+        <ul>
+            <li><strong>1. Tela Splash (Logo da Empresa):</strong> Exibição da marca do estúdio e cor de fundo padrão.</li>
+            <li><strong>2. Tela de Título:</strong> Nome do jogo, arte principal e opção "Pressione Start".</li>
+            <li><strong>3. Tela de Menu Principal:</strong>
+                <ul>
+                    <li>Mapeamento detalhado dos botões (ex: Jogar, Opções, Créditos, Sair).</li>
+                    <li>Definição da função exata de cada botão no fluxo do sistema.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="slide">
+        <h1>🎮 Mapeamento de Telas (Parte 2: Gameplay e Encerramento)</h1>
+        <h2>Regras de Visualização das Fases</h2>
+        <div class="grid-2">
+            <div class="card">
+                <h3>Tela de Fase / Gameplay</h3>
+                <p><strong>Resolução/Tamanho:</strong> Dimensões exatas da tela do jogo.</p>
+                <p><strong>Elementos:</strong> Quantidade e comportamento dos objetos, inimigos e HUD presentes.</p>
+            </div>
+            <div class="card">
+                <h3>Telas de Encerramento</h3>
+                <p><strong>Game Over:</strong> Botões de "Reiniciar" ou "Menu Principal" e mensagem transmitida.</p>
+                <p><strong>Win / Vitória:</strong> Pontuação, conquistas e opção de ir para a próxima fase.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="slide">
+        <h1>🎨 Paleta de Cores & Guia de Estilo</h1>
+        <h2>Padronização Visual no Documento</h2>
+        <ul>
+            <li><strong>Por que incluir uma Paleta de Cores no GDD?</strong>
+                <ul>
+                    <li>Garante a identidade visual contínua do projeto.</li>
+                    <li>Fornece um norte direto para o responsável pela arte gráfica do jogo.</li>
+                </ul>
+            </li>
+            <li><strong>O que Definir?</strong> Cor de fundo das telas, cores primárias de destaque, tom dos botões e contraste do HUD.</li>
+        </ul>
+        <div class="highlight-box">
+            <p>💡 Definir as cores no GDD ajuda a criar a atmosfera (mood) desejada para a experiência do jogador.</p>
+        </div>
+    </div>
+
+    <!-- Slide 6 -->
+    <div class="slide">
+        <h1>✍️ Atividade Prática</h1>
+        <h2>Desenhando o Mapa de Telas do Seu Jogo</h2>
+        <p>No seu GDD, crie a seção de Level Design/UI com os seguintes pontos:</p>
+        <ul>
+            <li>1. <strong>Sequência de Telas:</strong> Liste na ordem: Logo → Título → Menu → Fase → Game Over/Win.</li>
+            <li>2. <strong>Botões do Menu:</strong> Escreva quais botões estarão no menu e o que cada um faz.</li>
+            <li>3. <strong>Guia de Cores:</strong> Defina 3 cores principais do seu jogo (ex: Azul escuro para fundo, Amarelo para botões, Vermelho para alertas).</li>
+        </ul>
+    </div>
+
+    <!-- Rodapé e Navegação -->
+    <div class="footer">
+        <span class="slide-number" id="slide-num">Slide 1 / 6</span>
+        <div class="nav-btns">
+            <button onclick="changeSlide(-1)">Anterior</button>
+            <button onclick="changeSlide(1)">Próximo</button>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const slideNum = document.getElementById('slide-num');
+
+    function showSlide(index) {
+        slides.forEach(s => s.classList.remove('active'));
+        slides[index].classList.add('active');
+        slideNum.innerText = `Slide ${index + 1} / ${slides.length}`;
+    }
+
+    function changeSlide(direction) {
+        currentSlide += direction;
+        if (currentSlide < 0) currentSlide = 0;
+        if (currentSlide >= slides.length) currentSlide = slides.length - 1;
+        showSlide(currentSlide);
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === ' ') changeSlide(1);
+        if (e.key === 'ArrowLeft') changeSlide(-1);
+    });
+</script>
+
+</body>
+</html>
